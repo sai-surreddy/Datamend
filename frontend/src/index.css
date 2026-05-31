@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Syne:wght@400;500;600;700;800&family=DM+Sans:wght@300;400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* { box-sizing: border-box; }
+
+body {
+  background: #0a0a0f;
+  color: #e8e6f0;
+  font-family: 'DM Sans', sans-serif;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-track { background: #13131a; }
+::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 4px; }
+
+.font-display { font-family: 'Syne', sans-serif; }
+.font-mono { font-family: 'DM Mono', monospace; }
+
+/* Table */
+.df-table { width: 100%; border-collapse: collapse; font-size: 13px; }
+.df-table th {
+  padding: 10px 14px; text-align: left; font-family: 'DM Mono', monospace;
+  font-size: 10px; color: #6b6b8a; font-weight: 500; letter-spacing: 0.5px;
+  text-transform: uppercase; border-bottom: 1px solid #1e1e2e; white-space: nowrap;
+  background: #0d0d14; position: sticky; top: 0;
+}
+.df-table td {
+  padding: 8px 14px; border-bottom: 1px solid #0f0f18; color: #c8c6d8; font-size: 13px;
+}
+.df-table tr:hover td { background: #0f0f18; }
+.df-table td.cell-error { background: #1a0808 !important; }
+.df-table td.cell-warn { background: #1a1408 !important; }
+
+/* Animations */
+@keyframes spin { to { transform: rotate(360deg); } }
+.spin { animation: spin 0.7s linear infinite; }
+@keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:0.2} }
+.pulse-dot { animation: pulse-dot 1.5s ease infinite; }
