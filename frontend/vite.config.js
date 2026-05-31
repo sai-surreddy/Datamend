@@ -6,7 +6,16 @@ export default defineConfig({
   server: {
     port: 5173,
     proxy: {
-      '/api': 'http://localhost:8000',
+      // In development, proxy /api calls to local backend
+      // In production on Render, VITE_API_URL env var is used instead
+      '/api': {
+        target: 'http://localhost:8000',
+        changeOrigin: true,
+      },
     },
+  },
+  build: {
+    outDir: 'dist',
+    sourcemap: false,
   },
 })
