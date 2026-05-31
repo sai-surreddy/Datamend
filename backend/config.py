@@ -8,7 +8,7 @@ class Settings(BaseSettings):
     NVIDIA_API_KEY: str = "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"
     NVIDIA_BASE_URL: str = "https://integrate.api.nvidia.com/v1"
     NVIDIA_MODEL: str = "meta/llama-3.1-70b-instruct"
-    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:3000"
+    CORS_ORIGINS: str = "http://localhost:5173,http://localhost:3000,https://dataflow-app.onrender.com"
     UPLOAD_DIR: str = "./uploads"
     MAX_FILE_SIZE_MB: int = 50
 
